@@ -58,18 +58,7 @@ public class Livro {
     }
     
     public void incluirAutor(Autor autor) {
-        if (this.autores.size() != 0) {
-            for (Autor a : this.autores) {
-                if (a.getCodigo() != autor.getCodigo() && autor != null && !autores.contains(autor)) {
-                    this.autores.add(autor);
-                    break;
-                }
-            }
-        } else {
-            if (autor != null) {
-                this.autores.add(autor);
-            }
-        }
+        this.autores.add(autor);
     }
     
     public void excluirAutor(Autor autor) {
@@ -78,8 +67,7 @@ public class Livro {
     
     public void incluirCapitulo(int numero, String tituloCapitulo) {
         Capitulo capitulo = new Capitulo(numero, tituloCapitulo);
-
-                    this.capitulos.add(capitulo);
+        this.capitulos.add(capitulo);
     }
     
     public void excluirCapitulo(String tituloCapitulo) {
@@ -90,12 +78,9 @@ public class Livro {
     public Capitulo findCapituloByTitulo(String capTitulo) {
         for (Capitulo capitulo : this.capitulos) {
             if (capitulo.getTitulo().equals(capTitulo)) {
-                
                 return capitulo;
             }
         }
         return null;
     }
- 
-    
 }
