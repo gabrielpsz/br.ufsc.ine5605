@@ -12,6 +12,7 @@ public class Biblioteca {
         for (Livro l : this.livros) {
             if (l.getCodigo() != livro.getCodigo() && livro != null) {
                 this.livros.add(livro);
+                break;
             }
         }
     }
