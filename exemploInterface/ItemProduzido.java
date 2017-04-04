@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class ItemProduzido extends ItemEstoque implements Vendavel{
 	
 	private ArrayList<ItemComprado> estrutura;
+	private float precoVenda;
 
-	public ItemProduzido(int codigo, String descricao, float quantidadeEstoque) {
+	public ItemProduzido(int codigo, String descricao, float quantidadeEstoque, float precoVenda) {
 		super(codigo, descricao, quantidadeEstoque);
 		this.estrutura = new ArrayList<>();
+		this.precoVenda = precoVenda;
 	}	
 	
 	public void addItem(ItemComprado itemComprado) {
@@ -23,7 +25,17 @@ public class ItemProduzido extends ItemEstoque implements Vendavel{
 	
 	@Override
 	public float getPrecoVenda() {
-		return 0;
+		return this.precoVenda;
+	}
+
+	public ArrayList<ItemComprado> getEstrutura() {
+		return estrutura;
+	}
+	
+	@Override
+	public String getDescricao() {
+		return super.getDescricao() +" -> PRODUZIDO";
+		
 	}
 	
 	

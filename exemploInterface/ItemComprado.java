@@ -1,6 +1,6 @@
 package br.ufsc.ine5605.testeInterfaces;
 
-public class ItemComprado extends ItemEstoque{
+public class ItemComprado extends ItemEstoque {
 	
 	private String fornecedor;
 	

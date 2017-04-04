@@ -1,6 +1,6 @@
 package br.ufsc.ine5605.testeInterfaces;
 
-public class ItemEstoque {
+public abstract class ItemEstoque {
 	
 	private int codigo;
 	private String descricao;
