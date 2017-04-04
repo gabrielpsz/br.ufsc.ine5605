@@ -49,6 +49,12 @@ public class ControladorVenda {
 			System.out.println("Item: " +itemVendavel.getCodigo());
 			System.out.println("Preco: " +itemVendavel.getPrecoVenda());
 			System.out.println("Descrição: " +itemVendavel.getDescricao());
+			if (itemVendavel instanceof ItemProduzido) {
+				System.out.println("Item Produzido. Estrutura: ");
+				for (ItemComprado itemComprado : ((ItemProduzido) itemVendavel).getEstrutura()) {
+					System.out.println("     Componente: " +itemComprado.getCodigo());
+				}
+			}
 		}
 	}
 	
